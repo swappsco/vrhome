@@ -16,7 +16,7 @@ ROOT_DIR = environ.Path(__file__) - 3  # (vrhome/config/settings/common.py - 3 =
 APPS_DIR = ROOT_DIR.path('vrhome')
 
 env = environ.Env()
-
+environ.Env.read_env(ROOT_DIR() + '/.env')
 # APP CONFIGURATION
 # ------------------------------------------------------------------------------
 DJANGO_APPS = (
