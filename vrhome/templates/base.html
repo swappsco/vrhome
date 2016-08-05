@@ -24,7 +24,7 @@
     <link href="{% static 'css/project.css' %}" rel="stylesheet">
     {% endcompress %}
     {% endblock %}
-
+    
   </head>
 
   <body>
@@ -43,10 +43,11 @@
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <div class="collapse navbar-collapse mynavbar" id="bs-example-navbar-collapse-1">
               <ul class="nav navbar-nav">
                 <li class="active"><a href="#">{% trans "Home" %} <span class="sr-only">(current)</span></a></li>
                 <li><a href="#">{% trans "About us" %}</a></li>
+                <li class="mylogo"><a href="#"><img src=" http://placehold.it/150x50" alt="Logo"></a></li>
                 <li><a href="#">{% trans "Services" %}</a></li>
                 <li><a href="#">{% trans "Contact us" %}</a></li>
 
