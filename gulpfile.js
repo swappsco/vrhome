@@ -89,7 +89,7 @@ gulp.task('browserSync', function() {
 
 // Default task
 gulp.task('default', function() {
-    runSequence(['styles', 'scripts', 'imgCompression'], 'runServer', 'browserSync');
+    runSequence(['styles', 'scripts'], 'runServer', 'browserSync');
 });
 
 ////////////////////////////////
