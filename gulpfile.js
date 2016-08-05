@@ -1,23 +1,23 @@
-
 ////////////////////////////////
-		//Setup//
+    //Setup//
 ////////////////////////////////
 
 // Plugins
 var gulp = require('gulp'),
-      pjson = require('./package.json'),
-      gutil = require('gulp-util'),
-      sass = require('gulp-sass'),
       autoprefixer = require('gulp-autoprefixer'),
+      concat = require('gulp-concat'),
       cssnano = require('gulp-cssnano'),
-      rename = require('gulp-rename'),
       del = require('del'),
-      plumber = require('gulp-plumber'),
-      pixrem = require('gulp-pixrem'),
-      uglify = require('gulp-uglify'),
+      gutil = require('gulp-util'),
       imagemin = require('gulp-imagemin'),
-      exec = require('gulp-exec'),
+      pixrem = require('gulp-pixrem'),
+      pjson = require('./package.json'),
+      plumber = require('gulp-plumber'),
+      rename = require('gulp-rename'),
+      run = require('gulp-run'),
       runSequence = require('run-sequence'),
+      sass = require('gulp-sass'),
+      uglify = require('gulp-uglify'),
       browserSync = require('browser-sync');
 
 
@@ -33,18 +33,19 @@ var pathsConfig = function (appName) {
     fonts: this.app + '/static/fonts',
     images: this.app + '/static/images',
     js: this.app + '/static/js',
+    vendor: 'bower_components/',
   }
 };
 
 var paths = pathsConfig();
 
 ////////////////////////////////
-		//Tasks//
+    //Tasks//
 ////////////////////////////////
 
 // Styles autoprefixing and minification
 gulp.task('styles', function() {
-  return gulp.src(paths.sass + '/project.scss')
+  return gulp.src(paths.sass + '/**/*.scss')
     .pipe(sass().on('error', sass.logError))
     .pipe(plumber()) // Checks for errors
     .pipe(autoprefixer({browsers: ['last 2 version']})) // Adds vendor prefixes
@@ -66,17 +67,14 @@ gulp.task('scripts', function() {
 
 // Image compression
 gulp.task('imgCompression', function(){
-  return gulp.src(paths.images + '/*')
-    .pipe(imagemin()) // Compresses PNG, JPEG, GIF and SVG images
+  return gulp.src([paths.images + '/*.jpg', paths.images + '/*.jpeg', paths.images + '/*.png', paths.images + '/*.gif'])
+    .pipe(imagemin()) // Compresses PNG, JPEG, GIF
     .pipe(gulp.dest(paths.images))
 });
 
 // Run django server
 gulp.task('runServer', function() {
-  exec('python manage.py runserver', function (err, stdout, stderr) {
-    console.log(stdout);
-    console.log(stderr);
-  });
+  run('python manage.py runserver 0.0.0.0:8000').exec();
 });
 
 // Browser sync server for live reload
@@ -89,19 +87,30 @@ gulp.task('browserSync', function() {
 
 // Default task
 gulp.task('default', function() {
-    runSequence(['styles', 'scripts'], 'runServer', 'browserSync');
+    runSequence(['styles', 'scripts', 'scripts-vendor', 'imgCompression'], 'runServer', 'browserSync');
 });
 
 ////////////////////////////////
-		//Watch//
+    //Watch//
 ////////////////////////////////
 
 // Watch
 gulp.task('watch', ['default'], function() {
+  gulp.watch(paths.sass + '/**/*.scss', ['styles']);
+  gulp.watch(paths.vendor + '/**/*.scss', ['styles']);
+  gulp.watch(paths.js + '/**/*.js', ['scripts']);
+  gulp.watch('/bower_components/**/*', ['styles', 'scripts']);
+});
 
-  gulp.watch(paths.sass + '/*.scss', ['styles']);
-  gulp.watch(paths.js + '/*.js', ['scripts']);
-  gulp.watch(paths.images + '/*', ['imgCompression']);
-  gulp.watch('templates/*.html');
-
+// Javascript minification
+gulp.task('scripts-vendor', function() {
+  return gulp.src([
+      paths.vendor + '/jquery/dist/jquery.js',
+      paths.vendor + '/bootstrap/dist/js/bootstrap.js',
+      paths.vendor + '/angular/angular.js',
+      paths.vendor + '/progressbar.js/dist/progressbar.js'
+    ])
+    .pipe(plumber()) // Checks for errors
+    .pipe(concat('components.js'))
+    .pipe(gulp.dest(paths.js))
 });

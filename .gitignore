@@ -62,3 +62,4 @@ vrhome/media/
 # Hitch directory
 tests/.hitch
 
+bower_components/
