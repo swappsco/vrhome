@@ -42,6 +42,9 @@ p {
   font-family: 'exo_2light';
   font-size: 15px; }
 
+.clear {
+  clear: both; }
+
 /*!
  *  Font Awesome 4.6.3 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
@@ -7974,3 +7977,26 @@ button.close {
       font-size: 26px; }
       .banner .text-banner h1 strong {
         font-size: 45px; }
+
+.img-rotate {
+  position: relative; }
+  .img-rotate .col-sm-4 {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translate(0%, -50%); }
+  .img-rotate #image-reel {
+    cursor: url("../images/drop.png"), move !important; }
+  .img-rotate #drag {
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    transform: translate(-50%, -50%); }
+    .img-rotate #drag img {
+      display: inline-block;
+      vertical-align: middle; }
+    .img-rotate #drag p {
+      display: inline-block; }
+
+.reel-panning, .reel-panning * {
+  cursor: url("../images/drop.png"), move !important; }

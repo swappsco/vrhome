@@ -20,24 +20,24 @@
         </h2>
         <img src="{% static "images/bathroom.jpg" %}" alt="vrhome" class="center-block img-responsive">
         <p class="text-center m-t-40 m-b-40">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem perspiciatis temporibus, voluptatibus. Recusandae odio nulla, alias, impedit saepe harum ullam voluptatibus voluptatum consequatur hic labore! Commodi consectetur delectus saepe labore.</p>
-        <p class="text-center"><i class="fa fa-arrow-down f-s-35" aria-hidden="true"></i></p>
+        <p class="text-center"><a href="#third-section" class="text-white"><i class="fa fa-arrow-down f-s-35" aria-hidden="true"></i></a></p>
       </div>
     </div>
   </div>
 </section>
-<section class="img-rotate">
-  <div class="container">
-    <div class="row p-t-40">
-      <div class="col-sm-4 col-md-4">
-        <p class="m-0">Estibulum ut</p>
-        <h2 class="text-primary m-0">quisque vehicula</h2>
-        <p class="m-t-20">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, non porro expedita ipsum quae repudiandae beatae provident numquam assumenda recusandae omnis delectus aspernatur. Consequatur ad quidem voluptatem dolore fugit minus!</p>
-      </div>
-    </div>
+<section class="img-rotate" id="third-section">
+  <img src="{% static "images/360.png" %}" class="reel img-responsive" id="image" data-image="{% static "images/360-reel.png" %}" data-orientable="true" data-stitched="1652" width="100%">
+  <div class="col-sm-4 col-md-4 text-white">
+    <p class="m-0">Estibulum ut</p>
+    <h2 class="text-primary m-0">Quisque vehicula</h2>
+    <p class="m-t-20">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, non porro expedita ipsum quae repudiandae beatae provident numquam assumenda recusandae omnis delectus aspernatur. Consequatur ad quidem voluptatem dolore fugit minus!</p>
   </div>
-  <p class="text-center"><i class="fa fa-arrows-h f-s-35" aria-hidden="true"></i></p>
+  <div class="text-center text-white" id="drag">
+    <img src="{% static "images/drop.png" %}" alt="drop" class="img-responsive center-block">
+    <p>Drag to rotate 360</p>
+  </div>
 </section>
-<section class="img-ocolus">
+<section class="img-ocolus clear">
   <div class="container">
     <div class="row p-t-40">
       <div class="col-sm-4 col-md-4">
@@ -49,3 +49,32 @@
   </div>
 </section>
 {% endblock content %}
+{% block extra_js %}
+<script>
+  $(function() {
+    $('a[href*="#"]:not([href="#"])').click(function() {
+      if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+        if (target.length) {
+          $('html, body').animate({
+            scrollTop: target.offset().top - 50
+          }, 1000);
+          return false;
+        }
+      }
+    });
+  });
+</script>
+<script src="{% static "js/jquery-reel.js" %}"></script>
+<script>
+  $(function(){ // when DOM ready
+    return;
+    $('#image').reel({
+      stitched:    1652,
+      orientable:  true,
+    });
+  });
+</script>
+<script> $.reel.def.indicator = 0; </script>
+{% endblock extra_js %}

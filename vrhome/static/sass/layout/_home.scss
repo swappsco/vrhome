@@ -14,3 +14,31 @@
     }
   }
 }
+.img-rotate{
+  position: relative;
+  .col-sm-4{
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translate(0%, -50%);
+  }
+  #image-reel{
+    cursor:url('../images/drop.png'),move !important;
+  }
+  #drag{
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    img{
+      display: inline-block;
+      vertical-align: middle;
+    }
+    p{
+      display: inline-block;
+    }
+  }
+}
+.reel-panning,.reel-panning *{
+  cursor:url('../images/drop.png'),move !important;
+}
