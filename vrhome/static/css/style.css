@@ -7899,6 +7899,19 @@ button.close {
     width: 400px;
     top: 15%;
     left: 6%; }
+  @media (max-width: 767px) {
+    #oculus .text-oculus {
+      width: 300px; } }
+  @media (max-width: 991px) {
+    #oculus #oculus-img {
+      width: 80%; } }
+  @media (max-width: 480px) {
+    #oculus .text-oculus {
+      font-size: 12px; }
+      #oculus .text-oculus p {
+        font-size: inherit; }
+      #oculus .text-oculus h2 {
+        font-size: 16px; } }
 
 #contact {
   background-color: #d1334a;
