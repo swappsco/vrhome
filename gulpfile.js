@@ -100,6 +100,7 @@ gulp.task('watch', ['default'], function() {
   gulp.watch(paths.vendor + '/**/*.scss', ['styles']);
   gulp.watch(paths.js + '/**/*.js', ['scripts']);
   gulp.watch('/bower_components/**/*', ['styles', 'scripts']);
+  gulp.watch(paths.templates + "**/*.html").on('change', browserSync.reload);
 });
 
 // Javascript minification
@@ -107,10 +108,13 @@ gulp.task('scripts-vendor', function() {
   return gulp.src([
       paths.vendor + '/jquery/dist/jquery.js',
       paths.vendor + '/bootstrap/dist/js/bootstrap.js',
-      paths.vendor + '/angular/angular.js',
-      paths.vendor + '/progressbar.js/dist/progressbar.js'
+      paths.vendor + '/fullpage.js/jquery.fullPage.js'
     ])
     .pipe(plumber()) // Checks for errors
     .pipe(concat('components.js'))
     .pipe(gulp.dest(paths.js))
+    .pipe(uglify()) // Minifies the js
+    .pipe(rename({ suffix: '.min' }))
+    .pipe(gulp.dest(paths.js));
 });
+
