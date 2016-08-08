@@ -7,6 +7,7 @@
 // ------------------------------------------------------------
 .mynavbar {
 	text-align:center;
+
 	.nav {
 		float:none;
 		li {
@@ -17,11 +18,18 @@
 			a{
 				text-transform: uppercase;
 			}
+			a, a:hover, a:focus{
+				color: #21184f;
+			}
+		}
+		li.divider{
+			color: #ff5855;
+			margin: 0;
 		}
 		li.mylogo{
 			a{
 				background:transparent;
-				max-width:150px;
+				max-width:250px;
 				img{
 					width:100%;
 					height:auto;
