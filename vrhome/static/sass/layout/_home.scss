@@ -1,0 +1,16 @@
+.banner{
+  position: relative;
+  .text-banner{
+    width:400px;
+    position:absolute;
+    top: 50%;
+    left: 10%;
+    transform: translate(0%, -50%);
+    h1{
+      font-size: 26px;
+      strong{
+        font-size: 45px;
+      }
+    }
+  }
+}

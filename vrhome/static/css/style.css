@@ -20,6 +20,9 @@
 .m-b-40 {
   margin-bottom: 40px; }
 
+.m-t-0 {
+  margin-top: 0px; }
+
 .m-t-40 {
   margin-top: 40px; }
 
@@ -28,6 +31,16 @@
 
 .f-s-35 {
   font-size: 35px !important; }
+
+.text-purple {
+  color: #21184f; }
+
+strong {
+  font-family: 'exo_2bold'; }
+
+p {
+  font-family: 'exo_2light';
+  font-size: 15px; }
 
 /*!
  *  Font Awesome 4.6.3 by @davegandy - http://fontawesome.io - @fontawesome
@@ -2199,6 +2212,24 @@
   overflow: visible;
   clip: auto; }
 
+@font-face {
+  font-family: 'exo_2regular';
+  src: url("../fonts/exo2-regular-webfont.woff2") format("woff2"), url("../fonts/exo2-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'exo_2light';
+  src: url("../fonts/exo2-light-webfont.woff2") format("woff2"), url("../fonts/exo2-light-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'exo_2bold';
+  src: url("../fonts/exo2-bold-webfont.woff2") format("woff2"), url("../fonts/exo2-bold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
 /*!
  * Bootstrap v3.3.7 (http://getbootstrap.com)
  * Copyright 2011-2016 Twitter, Inc.
@@ -3251,7 +3282,7 @@ html {
   -webkit-tap-highlight-color: transparent; }
 
 body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "exo_2regular";
   font-size: 14px;
   line-height: 1.42857;
   color: #333333;
@@ -7317,7 +7348,7 @@ button.close {
   position: absolute;
   z-index: 1070;
   display: block;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "exo_2regular";
   font-style: normal;
   font-weight: normal;
   letter-spacing: normal;
@@ -7430,7 +7461,7 @@ button.close {
   display: none;
   max-width: 276px;
   padding: 1px;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "exo_2regular";
   font-style: normal;
   font-weight: normal;
   letter-spacing: normal;
@@ -7930,3 +7961,16 @@ button.close {
 @media print {
   .hidden-print {
     display: none !important; } }
+
+.banner {
+  position: relative; }
+  .banner .text-banner {
+    width: 400px;
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translate(0%, -50%); }
+    .banner .text-banner h1 {
+      font-size: 26px; }
+      .banner .text-banner h1 strong {
+        font-size: 45px; }
