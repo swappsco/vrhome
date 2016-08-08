@@ -42,6 +42,15 @@
 .reel-panning,.reel-panning *{
   cursor:url('../images/drop.png'),move !important;
 }
+#oculus{
+  position: relative;
+  .text-oculus{
+    position: absolute;
+    width: 400px;
+    top: 15%;
+    left: 6%;
+  }
+}
 #contact{
   background-color: #d1334a;
   padding-top: 100px;
