@@ -48,6 +48,52 @@
     </div>
   </div>
 </section>
+<section id="contact" class="text-white">
+<div class="container">
+    <div class="row">
+      <div class="col-sm-10 col-sm-offset-1">
+        <div class="row">
+          <div class="col-sm-8">
+            <h2 class="text-white">{% trans "Contact us" %}</h2>
+            <p class="text-white">
+              {% trans "Quos ea dignissimos quod modi architecto aut labore animi fugiat, aliquam odio voluptatem rerum officiis molestias veniam quo ab." %}
+            </p>
+            <form action="" method="POST">
+            <input type="hidden" name="csrfmiddlewaretoken" value="YunOjPCFbJiohumnNsiw9BI8R9Q79hiQ">
+              <div class="form-group">
+                  <input type="text" name="name" class="form-control" placeholder="Name * ">
+              </div>
+              <div class="form-group">
+                  <input type="email" name="email" class="form-control" placeholder="Email * ">
+              </div>
+              <div class="form-group">
+                  <textarea name="message" class="form-control" rows="7" placeholder="Message * "></textarea>
+              </div>
+              <div class="form-group">
+                    <button type="submit" class="btn btn-block">{% trans "Send" %}</button>
+              </div>
+            </form>
+          </div>
+          <div class="col-sm-4 text-center m-t-60">
+            <img class="img-responsive center-block" src="{% static 'images/footer-logo.png' %}" alt="Footer logo">
+            <address>
+              Los Angeles, CA, United States<br>
+              <a href="tel:+1-213-973-90-42">+1 (213) 973 90 42</a><br>
+              <a href="mailto:info@vrhome.com">info@vrhome.com</a><br>
+            </address>
+            <ul class="social">
+              <li><a href="//facebook.com" target="_blank"><i class="fa fa-2x fa-facebook" aria-hidden="true"></i></a></li>
+              <li><a href="//twitter.com" target="_blank"><i class="fa fa-2x fa-twitter" aria-hidden="true"></i></a></li>
+              <li><a href="//linkedin.com" target="_blank"><i class="fa fa-2x fa-linkedin" aria-hidden="true"></i></a></li>
+            </ul>
+            <p class="copyright">Copyright &copy; 2016 - VRHome</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</section>
 {% endblock content %}
 {% block extra_js %}
 <script>

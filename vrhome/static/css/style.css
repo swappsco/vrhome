@@ -17,6 +17,9 @@
 .m-t-20 {
   margin-top: 20px; }
 
+.m-t-60 {
+  margin-top: 60px; }
+
 .m-b-40 {
   margin-bottom: 40px; }
 
@@ -8000,3 +8003,80 @@ button.close {
 
 .reel-panning, .reel-panning * {
   cursor: url("../images/drop.png"), move !important; }
+
+#contact {
+  background-color: #d1334a;
+  padding-top: 100px;
+  padding-bottom: 100px; }
+  #contact a {
+    color: #fff; }
+  #contact h2 {
+    font-weight: bold; }
+  #contact h2 + p {
+    font-size: 18px; }
+  #contact button {
+    background-color: transparent;
+    border: 2px solid #fff;
+    text-transform: uppercase; }
+    #contact button:hover {
+      opacity: 0.7;
+      color: #fff; }
+  #contact img.center-block {
+    margin-bottom: 20px; }
+  #contact address {
+    font-size: 18px;
+    margin-bottom: 50px; }
+    #contact address a[href^=tel] {
+      font-size: 25px; }
+  #contact .social {
+    padding: 0;
+    margin-bottom: 20px; }
+    #contact .social li {
+      display: inline-block;
+      text-decoration: none;
+      margin: 0 25px; }
+      #contact .social li:hover {
+        opacity: 0.7; }
+  #contact .copyright {
+    opacity: 0.4; }
+
+.mynavbar {
+  text-align: center; }
+  .mynavbar .nav {
+    float: none; }
+    .mynavbar .nav li {
+      display: inline-block;
+      float: none;
+      margin: 0 20px;
+      vertical-align: middle; }
+      .mynavbar .nav li a {
+        text-transform: uppercase; }
+      .mynavbar .nav li a, .mynavbar .nav li a:hover, .mynavbar .nav li a:focus {
+        color: #21184f; }
+    .mynavbar .nav li.divider {
+      color: #ff5855;
+      margin: 0; }
+    .mynavbar .nav li.mylogo a {
+      background: transparent;
+      max-width: 250px; }
+      .mynavbar .nav li.mylogo a img {
+        width: 100%;
+        height: auto;
+        vertical-align: middle;
+        display: inline-block; }
+
+.navbar-brand {
+  display: none; }
+
+@media screen and (max-width: 768px) {
+  .navbar-brand {
+    display: inline; }
+  .mynavbar .nav li {
+    display: block;
+    margin: 0; }
+    .mynavbar .nav li a {
+      border-radius: 0;
+      display: block;
+      border-bottom: 1px solid #fff; }
+  .mynavbar .nav li.mylogo {
+    display: none; } }
