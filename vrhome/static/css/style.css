@@ -17,6 +17,9 @@
 .m-t-20 {
   margin-top: 20px; }
 
+.m-t-60 {
+  margin-top: 60px; }
+
 .m-b-40 {
   margin-bottom: 40px; }
 
@@ -7862,6 +7865,42 @@ button.close {
       font-size: 26px; }
       .banner .text-banner h1 strong {
         font-size: 45px; }
+
+#contact {
+  background-color: #d1334a;
+  padding-top: 100px;
+  padding-bottom: 100px; }
+  #contact a {
+    color: #fff; }
+  #contact h2 {
+    font-weight: bold; }
+  #contact h2 + p {
+    font-size: 18px; }
+  #contact button {
+    background-color: transparent;
+    border: 2px solid #fff;
+    text-transform: uppercase; }
+    #contact button:hover {
+      opacity: 0.7;
+      color: #fff; }
+  #contact img.center-block {
+    margin-bottom: 20px; }
+  #contact address {
+    font-size: 18px;
+    margin-bottom: 50px; }
+    #contact address a[href^=tel] {
+      font-size: 25px; }
+  #contact .social {
+    padding: 0;
+    margin-bottom: 20px; }
+    #contact .social li {
+      display: inline-block;
+      text-decoration: none;
+      margin: 0 25px; }
+      #contact .social li:hover {
+        opacity: 0.7; }
+  #contact .copyright {
+    opacity: 0.4; }
 
 .mynavbar {
   text-align: center; }
