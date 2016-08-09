@@ -90,6 +90,10 @@ gulp.task('default', function() {
     runSequence(['styles', 'scripts', 'scripts-vendor', 'imgCompression'], 'runServer', 'browserSync');
 });
 
+// Serve task
+gulp.task('serve', function() {
+    runSequence(['watch']);
+});
 ////////////////////////////////
     //Watch//
 ////////////////////////////////
@@ -107,7 +111,7 @@ gulp.task('watch', ['default'], function() {
 gulp.task('scripts-vendor', function() {
   return gulp.src([
       paths.vendor + '/jquery/dist/jquery.js',
-      paths.vendor + '/bootstrap/dist/js/bootstrap.js',
+      paths.vendor + '/bootstrap-sass/assets/javascripts/bootstrap.js',
       paths.vendor + '/fullpage.js/jquery.fullPage.js'
     ])
     .pipe(plumber()) // Checks for errors
