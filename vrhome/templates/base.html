@@ -28,10 +28,13 @@
 
   <body>
 
-    <nav class="navbar navbar-static-top">
+    <nav class="navbar navbar-fixed-top">
       <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
+              <a class="navbar-brand visible-xs" href="#">
+                <img src="{% static 'images/logo.png' %}" alt="Logo">
+              </a>
               <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
@@ -39,6 +42,7 @@
                 <span class="icon-bar"></span>
               </button>
             </div>
+            
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse mynavbar" id="bs-example-navbar-collapse-1">
@@ -80,26 +84,13 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     {% block javascript %}
-      <!-- Latest JQuery -->
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-
-      <!-- Tether - a requirement for Bootstrap tooltips -->
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js"></script>
-
-      <!-- Latest compiled and minified JavaScript -->
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
-      <!-- Your stuff: Third-party javascript libraries go here -->
-
       <!-- place project specific Javascript in this file -->
       {% compress js %}
+      <script src="{% static 'js/components.js' %}"></script>
       <script src="{% static 'js/project.js' %}"></script>
       {% endcompress %}
-
     {% endblock javascript %}
-
     {% block extra_js %}
     {% endblock extra_js %}
   </body>
 </html>
-

@@ -7,7 +7,6 @@
 // ------------------------------------------------------------
 .mynavbar {
 	text-align:center;
-
 	.nav {
 		float:none;
 		li {
@@ -40,15 +39,24 @@
 		}
 	}
 }
-
-
-
+.navbar-toggle{
+	background-color: #CB364C;
+	.icon-bar{
+		background-color: #fff;
+	}
+}
+.navbar-fixed-top{
+	background-color: #fff;
+}
 .navbar-brand {
 	display:none
 }
 @media screen and (max-width:768px) {
 	.navbar-brand {
 		display:inline;
+		img{
+			height: 50px;
+		}
 	}
 	.mynavbar{
 		.nav{
@@ -61,9 +69,22 @@
 					border-bottom:1px solid #fff;
 				}
 			}
+			li.divider{
+				display: none;
+			}
 			li.mylogo {
-				display:none
+				display:none;
 			}
 		}
+	}
+}
+@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+	.mynavbar .nav li{
+		margin:0;
+	}
+}
+@media (max-width: 768px){
+	.navbar-brand.visible-xs {
+	    display: block !important;
 	}
 }
