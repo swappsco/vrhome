@@ -7974,7 +7974,7 @@ button.close {
   background-size: cover;
   width: 100%;
   min-height: 500px;
-  background-position: center; }
+  background-position: center top; }
   .banner .fp-tableCell {
     display: -ms-flexbox;
     display: flex;
