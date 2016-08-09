@@ -2,16 +2,23 @@
 {% load i18n staticfiles%}
 
 {% block content %}
-<section class="banner">
-  <img src="{% static "images/banner.png" %}" alt="banner" class="img-responsive">
-  <div class="text-banner">
-    <h1 class="text-purple m-t-0">Consectetur adipiscing<br>
-      <strong><span class="text-primary">Nullame pretium</span></strong>
-    </h1>
-    <p class="text-purple">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit architecto impedit exercitationem odio, facilis voluptatibus deleniti, rerum odit.</p>
-    <a href="#" class="btn btn-primary btn-primary-ligth">READ MORE</a>
-  </div>
-</section>
+<div id="fullpage" >
+  <section class="banner section"  id="section0">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-6">
+          <div class="text-banner">
+            <h1 class="text-purple m-t-0">Consectetur adipiscing<br>
+              <strong><span class="text-primary">Nullame pretium</span></strong>
+            </h1>
+            <p class="text-purple">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit architecto impedit exercitationem odio, facilis voluptatibus deleniti, rerum odit.</p>
+            <a href="#" class="btn btn-primary btn-primary-ligth">READ MORE</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
 <section class="bg-purple text-white p-t-40 p-b-40">
   <div class="container">
     <div class="row">
@@ -45,7 +52,7 @@
     <p class="m-t-20 text-purple">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, non porro expedita ipsum quae repudiandae beatae provident numquam assumenda recusandae omnis delectus aspernatur. Consequatur ad quidem voluptatem dolore fugit minus!</p>
     <img id="oculus-img" class="img-responsive hidden-xs" src="{% static 'images/oculus.jpg' %}" alt="Oculus Rift">
   </div>
-  
+
 </section>
 <section id="contact" class="text-white">
 <div class="container">
@@ -108,6 +115,12 @@
           return false;
         }
       }
+    });
+    $('#fullpage').fullpage({
+      anchors: ['firstPage'],
+      autoScrolling: false,
+      css3: true,
+      fitToSection: false
     });
   });
 </script>

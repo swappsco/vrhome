@@ -1,18 +1,30 @@
 .banner{
-  position: relative;
-  .text-banner{
-    width:400px;
-    position:absolute;
-    top: 50%;
-    left: 10%;
-    transform: translate(0%, -50%);
-    h1{
-      font-size: 26px;
-      strong{
-        font-size: 45px;
-      }
-    }
+  background-image: url("../images/banner.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  min-height: 500px;
+  background-position:center;
+  .fp-tableCell{
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
   }
+  // position: relative;
+  // .text-banner{
+  //   width:400px;
+  //   position:absolute;
+  //   top: 50%;
+  //   left: 10%;
+  //   transform: translate(0%, -50%);
+  //   h1{
+  //     font-size: 26px;
+  //     strong{
+  //       font-size: 45px;
+  //     }
+  //   }
+  // }
 }
 .img-rotate{
   position: relative;
@@ -81,7 +93,7 @@
     width: 400px;
     top: 15%;
     left: 6%;
-    
+
   }
   @media (max-width: $screen-xs-max) {
     .text-oculus{
