@@ -19,7 +19,7 @@
     </div>
   </section>
 </div>
-<section class="bg-purple text-white p-t-40 p-b-40">
+<section class="bg-purple text-white p-t-40 p-b-40" id="second-section">
   <div class="container">
     <div class="row">
       <div class="col-sm-12 col-md-8 col-md-offset-2 p-t-30">
@@ -110,7 +110,7 @@
         target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
         if (target.length) {
           $('html, body').animate({
-            scrollTop: target.offset().top
+            scrollTop: target.offset().top - 50
           }, 1000);
           return false;
         }
