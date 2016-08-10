@@ -8142,4 +8142,5 @@ button.close {
 
 @media (max-width: 768px) {
   .navbar-brand.visible-xs {
-    display: block !important; } }
+    display: block !important;
+    padding-top: 0; } }
