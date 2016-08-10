@@ -19,15 +19,18 @@
     top: 50%;
     left: 10%;
     transform: translate(0%, -50%);
+    font-weight: bold;
   }
   #image-reel{
     cursor:url('../images/drop.png'),move !important;
+    -webkit-filter: grayscale(100%);
   }
   #drag{
     position: absolute;
     top: 50%;
     left: 60%;
     transform: translate(-50%, -50%);
+    font-weight: bold;
     img{
       display: inline-block;
       vertical-align: middle;
@@ -48,7 +51,7 @@
       max-height: 100%;
       img{
         height: 100% !important;
-        background-size: 100% 100% !important;
+        background-size: auto 100% !important;
       }
     }
   }

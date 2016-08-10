@@ -7987,14 +7987,17 @@ button.close {
     position: absolute;
     top: 50%;
     left: 10%;
-    transform: translate(0%, -50%); }
+    transform: translate(0%, -50%);
+    font-weight: bold; }
   .img-rotate #image-reel {
-    cursor: url("../images/drop.png"), move !important; }
+    cursor: url("../images/drop.png"), move !important;
+    -webkit-filter: grayscale(100%); }
   .img-rotate #drag {
     position: absolute;
     top: 50%;
     left: 60%;
-    transform: translate(-50%, -50%); }
+    transform: translate(-50%, -50%);
+    font-weight: bold; }
     .img-rotate #drag img {
       display: inline-block;
       vertical-align: middle; }
@@ -8011,7 +8014,7 @@ button.close {
       max-height: 100%; }
       .img-rotate #image-reel img {
         height: 100% !important;
-        background-size: 100% 100% !important; } }
+        background-size: auto 100% !important; } }
   @media (max-width: 514px) {
     .img-rotate .col-sm-4 {
       position: absolute;
