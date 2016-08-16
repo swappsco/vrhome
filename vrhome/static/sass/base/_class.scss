@@ -53,3 +53,10 @@ p{
 .f-s-45{
   font-size: 45px;
 }
+.btn-primary-ligth{
+  background:none;
+  border-color: #b83044 !important;
+}
+.btn-primary-ligth:hover{
+  @extend .btn-primary:hover;
+}
