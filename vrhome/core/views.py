@@ -34,7 +34,7 @@ class HomeView(View):
                     'subject': 'VRHOME| contact from ' +
                     form.cleaned_data['name'],
                     'description': message,
-                    'email': form.cleaned_data['email'],
+                    'email': settings.DEFAULT_FROM_EMAIL,
                     'priority': 3,
                     'status': 2
                 },
