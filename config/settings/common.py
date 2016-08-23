@@ -45,6 +45,7 @@ THIRD_PARTY_APPS = (
 LOCAL_APPS = (
     # custom users app
     'vrhome.users.apps.UsersConfig',
+    'vrhome.core',
     # Your stuff: custom apps go here
 )
 
@@ -246,5 +247,7 @@ STATICFILES_FINDERS += ("compressor.finders.CompressorFinder", )
 # Location of root django.contrib.admin URL, use {% url 'admin:index' %}
 ADMIN_URL = r'^admin/'
 
-
+DEFAULT_FROM_EMAIL = env('DJANGO_DEFAULT_FROM_EMAIL', default='dev@swapps.co')
+FRESHDESK_ENDPOINT = env('FRESHDESK_ENDPOINT')
+FRESHDESK_KEY = env('FRESHDESK_KEY')
 # Your common stuff: Below this line define 3rd party library settings
