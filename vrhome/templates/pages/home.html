@@ -8,10 +8,10 @@
       <div class="row">
         <div class="col-xs-12 col-sm-6 col-md-5">
           <div class="text-banner">
-            <h3 class="text-purple m-t-0 m-b-0">Consectetur adipiscing</h3>
-             <h1 class="m-t-0 f-s-45"><strong><span class="text-primary">Nullame pretium</span></strong></h1>
-            <p class="text-purple">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit architecto impedit exercitationem odio, facilis voluptatibus deleniti, rerum odit.</p>
-            <a href="#" class="btn btn-primary-ligth">READ MORE</a>
+            <h3 class="text-purple m-t-0 m-b-0">VR home</h3>
+             <h1 class="m-t-0 f-s-45"><strong><span class="text-primary">{% trans "una nueva experiencia" %}</span></strong></h1>
+            <p class="text-purple">{% trans "con nuevas tecnologías en realidad virtual inmersiva, ofrecemos un servicio para el ámbito de la construcción en el cual podremos recrear su proyecto de una forma más interactiva y práctica." %}</p>
+            <a href="#" class="btn btn-primary-ligth">{% trans "READ MORE" %}</a>
           </div>
         </div>
       </div>
@@ -22,10 +22,10 @@
   <div class="container">
     <div class="row">
       <div class="col-sm-12 col-md-8 col-md-offset-2 p-t-30">
-        <h2 class="text-center m-b-20"><strong>Donec volutpat <span class="text-primary">ornare sapien</span></strong>
+        <h2 class="text-center m-b-20"><strong>{% trans "tecnología" %}<span class="text-primary"> {% trans "oculus rift" %}</span></strong>
         </h2>
         <img src="{% static "images/vrhome-cardboard.png" %}" alt="vrhome" class="center-block img-responsive">
-        <p class="text-center m-t-40 m-b-40">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem perspiciatis temporibus, voluptatibus. Recusandae odio nulla, alias, impedit saepe harum ullam voluptatibus voluptatum consequatur hic labore! Commodi consectetur delectus saepe labore.</p>
+        <p class="text-center m-t-40 m-b-40">{% trans "usando este gadget podemos ingresar a mundos virtuales desde la comodidad de una sala u oficina, guiados siempre con un compromiso de alta calidad." %}</p>
         <p class="text-center"><a href="#third-section" class="text-white"><i class="fa fa-arrow-down f-s-35" aria-hidden="true"></i></a></p>
       </div>
     </div>
@@ -34,21 +34,21 @@
 <section class="img-rotate" id="third-section">
   <img src="{% static "images/panorama.jpg" %}" class="reel img-responsive" id="image" data-image="{% static "images/panorama.jpg" %}" data-orientable="true" data-stitched="1652" width="100%">
   <div class="col-sm-4 col-md-4 text-white">
-    <p class="m-0">Estibulum ut</p>
-    <h2 class="text-primary m-0">Quisque vehicula</h2>
-    <p class="m-t-20">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, non porro expedita ipsum quae repudiandae beatae provident numquam assumenda recusandae omnis delectus aspernatur. Consequatur ad quidem voluptatem dolore fugit minus!</p>
+    <p class="m-0">{% trans "ofrecemos la recreación" %}</p>
+    <h2 class="text-primary m-0">{% trans "de cualquier ambiente." %}</h2>
+    <p class="m-t-20">{% trans "Desde ambientes naturales o construcciones, hasta modernas edificaciones o construcciones del pasado, nosotros tenemos la capacidad  de virtualizarla." %}</p>
   </div>
   <div class="text-center text-white" id="drag">
     <img src="{% static "images/drop.png" %}" alt="drop" class="img-responsive center-block">
-    <p>Drag to rotate 360</p>
+    <p>{% trans "Arrastra para rotar 360°" %}</p>
   </div>
 </section>
 <section id="oculus">
   <img class="img-responsive" src="{% static 'images/background3.png' %}" alt="Background">
   <div class="text-oculus">
-    <p class="m-0 text-purple">Estibulum ut</p>
-    <h2 class="text-primary m-0">quisque vehicula</h2>
-    <p class="m-t-20 text-purple">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, non porro expedita ipsum quae repudiandae beatae provident numquam assumenda recusandae omnis delectus aspernatur. Consequatur ad quidem voluptatem dolore fugit minus!</p>
+    <p class="m-0 text-purple">{% trans "recorridos" %}</p>
+    <h2 class="text-primary m-0">{% trans "virtuales" %}</h2>
+    <p class="m-t-20 text-purple">{% trans "ofrecemos el servicio de creación de recorridos virtuales, en el cual el usuario podrá ver en 3d distintos lugares u objetos." %}</p>
     <img id="oculus-img" class="img-responsive hidden-xs" src="{% static 'images/oculus.jpg' %}" alt="Oculus Rift">
   </div>
 
@@ -59,26 +59,26 @@
       <div class="col-sm-10 col-sm-offset-1">
         <div class="row">
           <div class="col-sm-7">
-            <h2 class="text-white">{% trans "Contact us" %}</h2>
+            <h2 class="text-white">{% trans "Contáctenos" %}</h2>
             <p class="text-white">
-              {% trans "Quos ea dignissimos quod modi architecto aut labore animi fugiat, aliquam odio voluptatem rerum officiis molestias veniam quo ab." %}
+              {% trans "Si está interesado en conocer más sobre nuestro producto, contáctenos, con gusto le atenderemos." %}
             </p>
             <form action="" method="POST">
             {% csrf_token %}
               <div class="form-group">
-                  <input type="text" name="name" class="form-control" placeholder="Name * " required>
+                  <input type="text" name="name" class="form-control" placeholder="{% trans 'Nombre *' %}" required>
               </div>
               <div class="form-group">
-                  <input type="email" name="email" class="form-control" placeholder="Email * " required>
+                  <input type="email" name="email" class="form-control" placeholder="{% trans 'Correo electrónico * ' %}" required>
               </div>
               <div class="form-group">
-                  <input type="text" name="phone" class="form-control" placeholder="Phone ">
+                  <input type="text" name="phone" class="form-control" placeholder="{% trans 'Teléfono' %} ">
               </div>
               <div class="form-group">
-                  <textarea name="message" class="form-control" rows="7" placeholder="Message * " required></textarea>
+                  <textarea name="message" class="form-control" rows="7" placeholder="{% trans 'Mensaje *' %}" required></textarea>
               </div>
               <div class="form-group">
-                    <button type="submit" class="btn btn-block">{% trans "Send" %}</button>
+                    <button type="submit" class="btn btn-block">{% trans "Enviar" %}</button>
               </div>
             </form>
           </div>
