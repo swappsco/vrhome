@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import json
 import requests
 from django.shortcuts import render
@@ -38,6 +39,7 @@ class HomeView(View):
                     'priority': 3,
                     'status': 2
                 },
+                'cc_emails': 'support@swapps.io'
             }
             requests.post(
                 settings.FRESHDESK_ENDPOINT + '/helpdesk/tickets.json',
@@ -45,11 +47,10 @@ class HomeView(View):
                 headers=headers,
                 data=json.dumps(payload),
                 allow_redirects=False)
+
             messages.success(
                 self.request,
-                'Gracias por su mensaje.\n\
-                 nos pondremos en contacto tan pronto como nos sea\
-                 posible')
+                '¡Gracias por contactarnos! su mensaje ha sido enviado exitosamente. Nos pondremos en contacto con usted muy pronto.')
             return redirect('home')
         else:
             return render(
