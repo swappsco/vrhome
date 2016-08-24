@@ -8098,6 +8098,9 @@ button.close {
   #contact .copyright {
     opacity: 0.4; }
 
+.messages {
+  margin-top: 90px; }
+
 .mynavbar {
   text-align: center; }
   .mynavbar .nav {

@@ -65,19 +65,21 @@
       </div>
     </nav>
 
-    <div class="">
+    <main class="content{% block page_class %}{% endblock %}">
 
       {% if messages %}
+        <section class="messages">
           {% for message in messages %}
               <div class="alert {% if message.tags %}alert-{{ message.tags }}{% endif %}">{{ message }}</div>
           {% endfor %}
+        </section>
       {% endif %}
 
       {% block content %}
         <p>Use this document as a way to quick start any new project.</p>
       {% endblock content %}
 
-    </div> <!-- /container -->
+    </main> <!-- /container -->
 
     {% block modal %}{% endblock modal %}
 
