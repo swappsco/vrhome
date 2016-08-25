@@ -1,0 +1,62 @@
+.bg-purple{
+  background:#21184f;
+}
+.text-white{
+  color: #fff;
+}
+.p-t-40{
+  padding-top: 40px;
+}
+.p-b-40{
+  padding-bottom: 40px;
+}
+.m-b-0{
+  margin-bottom: 0px;
+}
+.m-b-20{
+  margin-bottom: 20px;
+}
+.m-t-20{
+  margin-top: 20px;
+}
+.m-t-60{
+  margin-top: 60px;
+}
+.m-b-40{
+  margin-bottom: 40px;
+}
+.m-t-0{
+  margin-top: 0px;
+}
+.m-t-40{
+  margin-top: 40px;
+}
+.m-0{
+  margin: 0px;
+}
+.f-s-35{
+  font-size:35px !important;
+}
+.text-purple{
+  color: #21184f;
+}
+strong{
+  font-family: 'exo_2bold';
+}
+p{
+  font-family: 'exo_2light';
+  font-size: 15px;
+}
+.clear{
+  clear: both;
+}
+.f-s-45{
+  font-size: 45px;
+}
+.btn-primary-ligth{
+  background:none;
+  border-color: #b83044 !important;
+}
+.btn-primary-ligth:hover{
+  @extend .btn-primary:hover;
+}

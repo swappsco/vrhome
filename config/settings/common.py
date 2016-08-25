@@ -16,7 +16,7 @@ ROOT_DIR = environ.Path(__file__) - 3  # (vrhome/config/settings/common.py - 3 =
 APPS_DIR = ROOT_DIR.path('vrhome')
 
 env = environ.Env()
-
+environ.Env.read_env(ROOT_DIR() + '/.env')
 # APP CONFIGURATION
 # ------------------------------------------------------------------------------
 DJANGO_APPS = (
@@ -45,6 +45,7 @@ THIRD_PARTY_APPS = (
 LOCAL_APPS = (
     # custom users app
     'vrhome.users.apps.UsersConfig',
+    'vrhome.core',
     # Your stuff: custom apps go here
 )
 
@@ -84,7 +85,8 @@ FIXTURE_DIRS = (
 # EMAIL CONFIGURATION
 # ------------------------------------------------------------------------------
 EMAIL_BACKEND = env('DJANGO_EMAIL_BACKEND', default='django.core.mail.backends.smtp.EmailBackend')
-
+DEFAULT_FROM_EMAIL = env('DJANGO_DEFAULT_FROM_EMAIL', default='support@swapps.io')
+SERVER_EMAIL = env('DJANGO_SERVER_EMAIL', default=DEFAULT_FROM_EMAIL)
 # MANAGER CONFIGURATION
 # ------------------------------------------------------------------------------
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#admins
@@ -246,5 +248,7 @@ STATICFILES_FINDERS += ("compressor.finders.CompressorFinder", )
 # Location of root django.contrib.admin URL, use {% url 'admin:index' %}
 ADMIN_URL = r'^admin/'
 
-
+DEFAULT_FROM_EMAIL = env('DJANGO_DEFAULT_FROM_EMAIL', default='dev@swapps.co')
+FRESHDESK_ENDPOINT = env('FRESHDESK_ENDPOINT')
+FRESHDESK_KEY = env('FRESHDESK_KEY')
 # Your common stuff: Below this line define 3rd party library settings

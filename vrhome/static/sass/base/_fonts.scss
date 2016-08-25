@@ -1,0 +1,26 @@
+@import "bower_components/font-awesome/scss/font-awesome.scss";
+
+@font-face {
+  font-family: 'exo_2regular';
+  src: url('../fonts/exo2-regular-webfont.woff2') format('woff2'),
+        url('../fonts/exo2-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+@font-face {
+  font-family: 'exo_2light';
+  src: url('../fonts/exo2-light-webfont.woff2') format('woff2'),
+      url('../fonts/exo2-light-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+@font-face {
+  font-family: 'exo_2bold';
+  src: url('../fonts/exo2-bold-webfont.woff2') format('woff2'),
+      url('../fonts/exo2-bold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}

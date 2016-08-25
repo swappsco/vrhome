@@ -1,0 +1,91 @@
+// File Name: _navbar.scss
+// Description: Navbar styles
+// Used by: 
+// Dependencies: 
+// Date created: 05/08/2016
+// SassySass v1.3.1
+// ------------------------------------------------------------
+.mynavbar {
+	text-align:center;
+	.nav {
+		float:none;
+		li {
+			display:inline-block;
+			float:none;
+			margin:0 20px;
+			vertical-align:middle;
+			a{
+				text-transform: uppercase;
+			}
+			a, a:hover, a:focus{
+				color: #21184f;
+			}
+		}
+		li.divider{
+			color: #ff5855;
+			margin: 0;
+		}
+		li.mylogo{
+			a{
+				background:transparent;
+				max-width:250px;
+				img{
+					width:100%;
+					height:auto;
+					vertical-align:middle;
+					display:inline-block;
+				}
+			}
+		}
+	}
+}
+.navbar-toggle{
+	background-color: #CB364C;
+	.icon-bar{
+		background-color: #fff;
+	}
+}
+.navbar-fixed-top{
+	background-color: #fff;
+}
+.navbar-brand {
+	display:none
+}
+@media screen and (max-width:768px) {
+	.navbar-brand {
+		display:inline;
+		img{
+			height: 50px;
+		}
+	}
+	.mynavbar{
+		.nav{
+			li{
+				display:block;
+				margin:0;
+				a{
+					border-radius:0;
+					display:block;
+					border-bottom:1px solid #fff;
+				}
+			}
+			li.divider{
+				display: none;
+			}
+			li.mylogo {
+				display:none;
+			}
+		}
+	}
+}
+@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+	.mynavbar .nav li{
+		margin:0;
+	}
+}
+@media (max-width: 768px){
+	.navbar-brand.visible-xs {
+	    display: block !important;
+	    padding-top: 0;
+	}
+}
