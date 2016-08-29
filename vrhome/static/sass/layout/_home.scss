@@ -153,6 +153,11 @@
   .copyright{
     opacity: 0.4;
   }
+  .brand-link{
+    img:hover {
+        opacity: 0.6;
+    }
+  }
 }
 .messages{
   margin-top: 90px;

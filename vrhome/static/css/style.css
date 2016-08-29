@@ -8097,6 +8097,8 @@ button.close {
         opacity: 0.7; }
   #contact .copyright {
     opacity: 0.4; }
+  #contact .brand-link img:hover {
+    opacity: 0.6; }
 
 .messages {
   margin-top: 90px; }
